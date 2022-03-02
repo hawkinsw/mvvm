@@ -3,10 +3,6 @@
 
 #include <vm/vm.hpp>
 
-Value BoolValue::add(const Value &value) const {
-  return value.add(*this);
-}
-
 Value BoolValue::add(const DoubleValue &double_value) const {
   throw std::bad_typeid();
 }

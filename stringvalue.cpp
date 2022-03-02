@@ -3,11 +3,6 @@
 
 #include <vm/vm.hpp>
 
-
-Value StringValue::add(const Value &value) const {
-  return value.add(*this);
-}
-
 Value StringValue::add(const DoubleValue &double_value) const {
   return Value(m_value + std::to_string(double_value.m_value));
 }

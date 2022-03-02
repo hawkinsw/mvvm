@@ -7,9 +7,9 @@ class BoolValue : public Value {
 public:
   BoolValue(const bool &bool_value) : Value(ValueToken{}) {
     m_value = bool_value;
+    m_type = ValueType::BoolValue;
   }
 
-  Value add(const Value &value) const;
   Value add(const DoubleValue &double_value) const;
   Value add(const StringValue &string_value) const;
   Value add(const BoolValue &bool_value) const;

@@ -7,9 +7,9 @@ class StringValue : public Value {
 public:
   StringValue(const std::string &string_value) : Value(ValueToken{}) {
     m_value = string_value;
+    m_type = ValueType::StringValue;
   }
 
-  Value add(const Value &value) const;
   Value add(const DoubleValue &double_value) const;
   Value add(const StringValue &string_value) const;
   Value add(const BoolValue &bool_value) const;

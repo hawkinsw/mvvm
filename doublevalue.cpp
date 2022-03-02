@@ -6,10 +6,6 @@
 
 #include <vm/vm.hpp>
 
-Value DoubleValue::add(const Value &value) const {
-  return value.add(*this);
-}
-
 Value DoubleValue::add(const DoubleValue &double_value) const {
   return Value(m_value + double_value.m_value);
 }

@@ -7,9 +7,9 @@ class DoubleValue : public Value {
 public:
   DoubleValue(const double &double_value) : Value(ValueToken{}) {
     m_value = double_value;
+    m_type = ValueType::DoubleValue;
   }
 
-  Value add(const Value &value) const;
   Value add(const DoubleValue &double_value) const;
   Value add(const StringValue &string_value) const;
   Value add(const BoolValue &bool_value) const;
